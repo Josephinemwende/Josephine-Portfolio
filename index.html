@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mwenswa's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between py-3">
+            <div class="col-12 col-md-3 text-md-start text-center mb-3 mb-md-0">
+                <img src="./Images/logo.portfolio.png" alt="portfolio-logo" style="max-width: 100px;">
+            </div>
+            <div class="col-12 col-md-4">
+                <nav>
+                    <ul class="d-flex justify-content-center list-unstyled mb-0 gap-4">
+                        <li><a class="text-decoration-none px-4" href="#">Home</a></li>
+                        <li><a class="text-decoration-none px-4" href="#">About</a></li>
+                        <li><a class="text-decoration-none px-4" href="./services">Services</a></li>
+                        <li><a class="text-decoration-none px-4" href="#">Skills</a></li>
+                        <li><a class="text-decoration-none px-4" href="#">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-md-3 text-md-end text-center mt-3 mt-md-0">
+                <a href="#contact" class="btn rounded-5 border-0 py-3 px-4 fw-bold text-white" style="background-color: #F24F13;">Contact Me</a>
+                <button id="darkModeToggle" class="btn btn-outline-dark rounded-5 px-3 py-2 ms-3">
+                    🌙 Dark Mode
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Icons Floating on Left Side -->
+    <div class="social-sidebar position-fixed d-none d-md-flex flex-column align-items-center gap-4">
+        <a href="https://github.com/Josephinemwende" target="_blank"><img src="./Images/github-icon.png" alt="github" style="width: 40px;"></a>
+        <a href="https://linkedin.com/in/josephine-mwenswa" target="_blank"><img src="./Images/linkedin-icon.png" alt="linkedin" style="width: 40px;"></a>
+        <a href="mailto:josephine.mwenswa@gmail.com"><img src="./Images/mail-icon.png" alt="mail" style="width: 40px;"></a>
+        <a href="https://wa.me/0719263661" target="_blank"><img src="./Images/whatsapp-icon.png" alt="whatsapp" style="width: 40px;"></a>
+    </div>
+    <!--Header Content-->
+    <header id="header" class="container py-5 mt-2">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <span class="fw-bold fst-italic" style="color: #F24F13; font-size: 18px;">Hello,</span>
+                <h1 class="mt-3 fw-bold">I'm Josephine Mwenswa: <span style="color: #F24F13">A Software Engineer.</span></h1>
+                <p class="text-muted my-4">I build fast, scalable, and elegant web applications that not only perform exceptionally but also deliver seamless user experiences. With a strong focus on clean,
+                    maintanable code and modern development practices, I strive to create software that's as robust behind the scenes as it is intuitive on the front-end. Whether it's optimizing performance, crafting responsive interfaces, or architecting
+                    backend systems, I'm driven to build solutions that make a meaningful impact.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="CV" class="btn rounded-5 border-0 py-3 px-4 fw-bold text-white" style="background-color: #F24F13;"><img src="./Images/icons8-download-64.png" style="width: 30px;" class="pe-1">Download CV</a>
+                    <a href="#portfolio" class="btn btn-outline-custom rounded-5 px-4 py-3 fw-bold" style="border: 2px solid #F24F13; color:#031326">View My Work</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 text-center mt-5 mt-md-0">
+                <img class="img-fluid rounded-pill" src="./Images/portfolio-hero-image.jpg" alt="An avator" style="max-width: 600px;">
+            </div>
+        </div>
+    </header>
+    <!-- What I Do Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-1 fw-bold fst-italic" style="color: #F24F13; font-size: 18px;">What I do,</p>
+                    <h2 class="fw-bold display-6">My Services</h2>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                    <p class="text-muted">
+                    I design, build, and deliver high-quality software solutions. From web development 
+                    to scalable cloud applications, I help businesses and individuals bring their ideas to life 
+                    with modern, reliable, and efficient technology.
+                    </p>
+                    <a href="CV" class="btn rounded-5 border-0 py-3 px-4 fw-bold text-white" style="background-color: #F24F13;">Hire Me</a>
+                </div>
+                </div>
+
+                <!-- Service Cards -->
+                <div class="row g-4">
+                <!-- Card 1 (Highlighted) -->
+                <div class="col-md-4">
+                    <div class="service-card highlighted h-100 p-4">
+                        <div class="icon mb-3">
+                            <img src="./Images/icons8-web-development-64.png" alt="web-development-icon" style="width: 50px;">
+                        </div>
+                        <h5 class="fw-bold text-white">Web Application Development</h5>
+                        <hr class="divider">
+                        <p class="mt-3">
+                            Building responsive, secure, and scalable web apps using modern frameworks 
+                            and best practices. Proficient in developing clean and maintainable code, optimizing performance for 
+                            fast load times, and ensuring cross-browser compatibility. Strong focus on accessibility and user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 p-4">
+                    <div class="icon mb-3 text-danger">
+                        <img src="./Images/icons8-ui-ux-design-50 (2).png" alt="UI-UX icon" style="width: 50px;">
+                    </div>
+                    <h5 class="fw-bold">UI/UX Design</h5>
+                    <hr class="divider">
+                    <p class="mt-3 text-muted">
+                        Skilled in designing intuitive, user-centered interfaces that balance aesthetics with functionality. 
+                        Experienced in creating wireframes, prototypes, and high-fidelity designs to streamline user journeys and enhance engagement. 
+                        Proficient in applying design systems, accessibility standards, and usability testing to deliver consistent, inclusive, and visually appealing digital experiences.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 p-4">
+                    <div class="icon mb-3 text-danger">
+                        <img src="./Images/icons8-devops-50.png" alt="cloud-devops-icon" style="width: 50px;">
+                    </div>
+                    <h5 class="fw-bold">Cloud & DevOps</h5>
+                    <hr class="divider">
+                    <p class="mt-3 text-muted">
+                        Proficient in implementing cloud-based solutions and DevOps practices to ensure reliable, scalable, and automated software delivery. 
+                        Experienced with CI/CD pipelines, containerization (Docker, Kubernetes), and infrastructure as code (Terraform). 
+                        Skilled in deploying and managing applications on cloud platforms (AWS, Azure) with a focus on monitoring, security, and cost optimization.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 p-4">
+                    <div class="icon mb-3 text-danger">
+                        <img src="./Images/icons8-rest-api-50.png" alt="api-development-icon" style="width: 50px;">
+                    </div>
+                    <h5 class="fw-bold">API Development</h5>
+                    <hr class="divider">
+                    <p class="mt-3 text-muted">
+                        Experienced in designing and developing robust, secure, and scalable APIs to enable seamless data exchange and system integration. 
+                        Skilled in building RESTful APIs, implementing authentication and authorization <span class="fw-bold">(OAuth2, JWT)</span>, and ensuring high performance through caching, rate limiting, and optimization techniques. 
+                        Proficient in API documentation <span class="fw-bold">(Swagger)</span> and versioning to support maintainability and developer collaboration.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="service-card h-100 p-4">
+                    <div class="icon mb-3 text-danger">
+                        <img src="./Images/icons8-ai-50.png" alt="ai-integration-icon" style="width: 50px;"> 
+                    </div>
+                    <h5 class="fw-bold">AI Integration</h5>
+                    <hr class="divider">
+                    <p class="mt-3 text-muted">
+                        Skilled in integrating AI and machine learning capabilities into applications to enhance automation, personalization, and decision-making. 
+                        Experienced in leveraging pre-trained models and APIs (NLP, recommendation systems) as well as deploying custom ML models. 
+                        Proficient in connecting AI services with web, ensuring scalability, security, and real-time performance. 
+                        Familiar with popular frameworks and platforms such as TensorFlow, PyTorch and OpenAI.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section class="skills-section py-5">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+                <p class="section-subtitle mb-1 fst-italic fw-bold">Tools and Technologies,</p>
+                <h2 class="section-title display-6 fw-bold">My Skills</h2>
+            </div>
+            <div>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Git</span>
+                <span class="tech-badge">Figma</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">Swagger</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container py-5">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+                <p class="section-subtitle mb-1 fst-italic fw-bold">My Work,</p>
+                <h2 class="section-title display-6 fw-bold">Portfolio</h2>
+            </div>
+        </div>
+</section>
+<footer class="contact-section bg-light" id="contact">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6 contact-info">
+                <span class="mb-1 fst-italic fw-bold">contact me,</span>
+                <h1 class="display-6">Get in touch</h1>
+                <p class="text-muted mb-4">Let's connect! I'm open to collaboration, Freelance projects, or new opportunities.</p>
+                    
+                <div class="contact-item ">
+                    <div class="contact-icon">
+                        <img src="./Images/icons8-email-50.png" alt="email-icon" style="width: 25px;"> 
+                    </div>
+                    <p class="contact-text text-muted">josephine.mwenswa@gmail.com</p>
+                </div>
+                    
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="./Images/icons8-location-50.png" alt="address-icon" style="width: 25px;">
+                    </div>
+                    <div class="contact-text text-muted">
+                        Nairobi, Kenya.
+                    </div>
+                </div>
+                    
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="./Images/icons8-phone-50.png" alt="phone-icon" style="width: 25px;">
+                    </div>
+                    <p class="contact-text text-muted">+254 719 263 661</p>
+                </div>
+            </div>
+                
+            <div class="col-lg-6">
+                <div class="form-section">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

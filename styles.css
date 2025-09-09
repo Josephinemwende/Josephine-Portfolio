@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Futura";
+    src: url("./fonts/Futura-Regular.woff2") format("woff2"),
+        url("./fonts/Futura-Regular.woff") format("woff"),
+        url("./fonts/Futura-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+/* Default (light mode) is already your current design */
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode .container,
+body.dark-mode section,
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h5,
+body.dark-mode span,
+body.dark-mode a {
+  color: #eaeaea !important;
+}
+
+body.dark-mode .service-card {
+  background-color: #2a2a2a;
+  color: #eaeaea;
+}
+
+body.dark-mode .service-card.highlighted {
+  background-color: #F24F13; /* Keep highlight */
+  color: white;
+}
+
+body.dark-mode .btn-outline-custom {
+  border-color: #F24F13;
+  color: #eaeaea;
+}
+
+body.dark-mode .skills-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .tech-badge {
+  background-color: #333;
+  color: #f1f1f1;
+}
+body.dark-mode .tech-badge:hover {
+  background-color: #F24F13;
+  color: white;
+}
+nav ul li a {
+    color: #031326;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #F24F13;
+    font-weight: bold;
+}
+.social-sidebar {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.social-sidebar a img {
+    transition: transform 0.3s ease;
+}
+.social-sidebar a img:hover {
+    transform: scale(1.2);
+}
+#header h1{
+    color: #031326;
+}
+.service-card {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+.service-card h5{
+    color:#031326;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-card.highlighted {
+    background: #031326;
+   color: #fff;
+}
+
+.service-card.highlighted a {
+    color: #fff;
+}
+  
+.service-card .icon {
+    line-height: 0;
+}
+
+/* Divider line under titles */
+.service-card .divider {
+   border: none; 
+   border-top: 3px solid #F24F13;
+   margin: 0.75rem 0;
+}
+
+.service-card.highlighted .divider {
+    border-top: 3px solid #F24F13;
+}
+.skills-section {
+    background: #fce9e9;
+    padding: 50px 0;
+}
+.section-subtitle {
+    color: #F24F13;
+    font-size: 18px;
+}
+.section-title {
+    color:#031326;
+}
+.tech-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+.tech-badge {
+    background-color: #F24F13;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 8px;
+    display: inline-block;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.tech-badge:hover {
+    background-color: #031326;
+    transform: scale(1.05);
+}
+.contact-section {
+    background: #fff;
+    min-height: 70vh;
+}
+        
+.contact-info h1 {
+    font-weight: bold;
+    color: #031326;
+    margin-bottom: 1.5rem;
+}
+.contact-info span{
+    color: #F24F13;
+    font-size: 18px;
+}  
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+        
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #F24F13;
+}
+        
+.contact-text {
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+} 
+.form-section {
+    padding: 2rem;
+}
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+        
+.form-control:focus {
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+    background-color: white;
+}
+.form-label {
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.submit-btn {
+    background: #F24F13;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    transition: transform 0.2s;
+}
+        
+.submit-btn:hover {
+    transform: translateY(-1px);
+    background: #031326;        
+}
+        
