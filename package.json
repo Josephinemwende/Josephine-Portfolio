@@ -4,6 +4,6 @@
     "nodemailer": "^7.0.6"
   },
   "scripts": {
-  "start": "node mail.js"
+  "start": "Server/node mail.js"
 }
 }
