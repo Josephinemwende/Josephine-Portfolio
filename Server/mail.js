@@ -6,6 +6,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+const cors = require("cors");
+app.use(cors({
+  origin: "https://josephinemwende.github.io/Josephine-Portfolio/"
+}));
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + 'index.html'));
 
