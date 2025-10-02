@@ -89,19 +89,30 @@ document.querySelectorAll(".progress-demo").forEach(btn => {
   });
 
   //fetch for the form
-  document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+const form = document.getElementById("contactForm");
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const res = await fetch("https://subtle-pixie-92477c.netlify.app/.netlify/functions/mail", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message })
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
+      const res = await fetch("https://subtle-pixie-92477c.netlify.app/.netlify/functions/mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+      alert(data.message || data.error);
+    } catch (err) {
+      console.error(err);
+      alert("❌ Something went wrong. Please try again later.");
+    }
   });
-
-  const data = await res.json();
-  alert(data.message || data.error);
-});
+} else {
+  console.warn("⚠️ contactForm not found on this page.");
+}
