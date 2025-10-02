@@ -96,7 +96,7 @@ document.querySelectorAll(".progress-demo").forEach(btn => {
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  const res = await fetch("https://roaring-pithivier-727124.netlify.app/.netlify/functions/mail", {
+  const res = await fetch("https://subtle-pixie-92477c.netlify.app/.netlify/functions/mail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, message })
