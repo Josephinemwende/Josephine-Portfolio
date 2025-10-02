@@ -83,15 +83,15 @@ nav ul li a:hover {
     color: #031326;
 }
 .portfolio-image {
-  width: 600px;      /* set width */
-  height: 600px;     /* set height (same as width for perfect circle) */
+  max-width: 90%;      /* set width */
+  height: auto;     /* set height (same as width for perfect circle) */
   border-radius: 50%;
   object-fit: cover; /* ensures the image scales/crops nicely */
 }
 
 .service-card {
     background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     border-radius: 25px;
 }
@@ -120,7 +120,7 @@ nav ul li a:hover {
 .service-card .divider {
    border: none; 
    border-top: 3px solid #F24F13;
-   margin: 0.75rem 0;
+   margin: 0.75rem 0 1 rem;
 }
 
 .service-card.highlighted .divider {
@@ -129,6 +129,11 @@ nav ul li a:hover {
 .skills-section {
     background: #fce9e9;
     padding: 50px 0;
+}
+.skills-section div > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
 }
 .section-subtitle {
     color: #F24F13;
@@ -150,6 +155,7 @@ nav ul li a:hover {
     display: inline-block;
     font-weight: 500;
     transition: 0.3s;
+    white-space: nowrap;
 }
 .tech-badge:hover {
     background-color: #031326;
@@ -202,7 +208,25 @@ nav ul li a:hover {
 .project-img:hover {
     transform: scale(1.05); /* subtle zoom effect on hover */
 }
+@media (max-width: 768px) {
+  #Portfolio .row.g-4 {
+    flex-direction: column !important; /* stack image & description cards */
+  }
 
+  #Portfolio .project-images {
+    display: flex;
+    flex-wrap: wrap;          /* allow images to wrap */
+    justify-content: center;  /* center them */
+    gap: 1rem;
+  }
+
+  #Portfolio .project-images img {
+    flex: 1 1 100%;    /* each image takes full width */
+    max-width: 90%;    /* prevent touching edges */
+    height: auto;      /* keep aspect ratio */
+    border-radius: 8px;
+  }
+}
 .contact-section {
     background: #fff;
     min-height: 70vh;

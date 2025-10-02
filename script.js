@@ -22,6 +22,27 @@
   });
 });*/
 
+const menuToggle = document.getElementById('menuToggle');
+  const offcanvasMenu = document.getElementById('offcanvasMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuToggle.addEventListener('click', () => {
+    offcanvasMenu.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    offcanvasMenu.classList.remove('active');
+  });
+
+  // Optional: close menu when clicking a link
+  document.querySelectorAll('.offcanvas-menu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      offcanvasMenu.classList.remove('active');
+    });
+  });
+
+
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault(); // stop the # from showing in URL
