@@ -100,7 +100,7 @@ if (form) {
     const message = document.getElementById("message").value;
 
     try {
-      const res = await fetch("https://subtle-pixie-92477c.netlify.app/.netlify/functions/mail", {
+      const res = await fetch("https://glittery-phoenix-cc4f73.netlify.app/.netlify/functions/mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
