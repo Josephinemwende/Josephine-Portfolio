@@ -22,7 +22,7 @@
   });
 });*/
 
-const menuToggle = document.getElementById('menuToggle');
+/*const menuToggle = document.getElementById('menuToggle');
   const offcanvasMenu = document.getElementById('offcanvasMenu');
   const closeMenu = document.getElementById('closeMenu');
 
@@ -39,7 +39,7 @@ const menuToggle = document.getElementById('menuToggle');
     link.addEventListener('click', () => {
       offcanvasMenu.classList.remove('active');
     });
-  });
+  });*/
 
 
 
