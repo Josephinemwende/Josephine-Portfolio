@@ -90,6 +90,7 @@ document.querySelectorAll(".progress-demo").forEach(btn => {
 
   //fetch for the form
 const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
@@ -107,12 +108,26 @@ if (form) {
       });
 
       const data = await res.json();
-      alert(data.message || data.error);
+
+      // Set message text & style
+      formMessage.textContent = data.message || data.error;
+      formMessage.className = "form-message show " + (data.status === "success" ? "success" : "error");
+
+      if (data.status === "success") form.reset();
+
+      // Hide message after 4 seconds
+      setTimeout(() => {
+        formMessage.classList.remove("show");
+      }, 4000);
+
     } catch (err) {
       console.error(err);
-      alert("❌ Something went wrong. Please try again later.");
+      formMessage.textContent = "❌ Something went wrong. Please try again later.";
+      formMessage.className = "form-message show error";
+
+      setTimeout(() => {
+        formMessage.classList.remove("show");
+      }, 4000);
     }
   });
-} else {
-  console.warn("⚠️ contactForm not found on this page.");
 }
