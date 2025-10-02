@@ -74,7 +74,6 @@ scrollBtn.addEventListener("click", () => {
   }
 });
 
-
 document.querySelectorAll(".progress-demo").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
@@ -88,3 +87,21 @@ document.querySelectorAll(".progress-demo").forEach(btn => {
       }, 3000);
     });
   });
+
+  //fetch for the form
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const res = await fetch("https://roaring-pithivier-727124.netlify.app/.netlify/functions/mail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message })
+  });
+
+  const data = await res.json();
+  alert(data.message || data.error);
+});
