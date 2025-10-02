@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="#Home">
-    <nav class="navbar navbar-expand-md py-3">
+    <nav class="navbar py-3">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="/">
@@ -17,33 +17,36 @@
             </a>
 
             <!-- Toggle button for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbarMenu">
-            <!-- Center nav links -->
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-md-3 text-center">
-                <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#About">About</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#Services">Services</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#Skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#Portfolio">Portfolio</a></li>
-
-                <!-- Contact button (only visible inside menu on mobile) -->
-                <li class="nav-item d-md-none mt-3">
-                <a href="#Contact" class="btn rounded-5 border-0 py-2 px-4 fw-bold text-white w-100"
-                    style="background-color: #F24F13;">Contact Me</a>
-                </li>
-            </ul>
-
-            <!-- Contact button (visible on desktop at far right) -->
-            <div class="d-none d-md-block ms-md-auto">
-                <a href="#Contact" class="btn rounded-5 border-0 py-3 px-4 fw-bold text-white"
-                style="background-color: #F24F13;">Contact Me</a>
+            <div class="d-flex justify-content-end d-md-none col-auto ms-auto">
+                <img class="menu-bar" id="menu-toggle" src="./Images/icons8-menu-50.png" alt="menu-bar">
             </div>
+
+            <div id="mobile-nav" class="position-fixed end-0 top-0 bg-white shadow  d-none d-flex d-md-none flex-column" style="height: 100vh; width: 75vw; z-index: 9999;">
+                <div id="menu-close" class="d-flex justify-content-end mt-4 me-5">
+                    <img src="./Images/icons8-close-50.png" alt="close icon">
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <a href="/" class="active text-muted text-decoration-none text-dark my-3">Home</a>
+                    <a href="#About" class="text-muted text-decoration-none text-dark my-3">About</a>
+                    <a href="#Services" class="text-muted text-decoration-none text-dark my-3">Services</a>
+                    <a href="#Skills" class="text-muted text-decoration-none text-dark my-3">Skills</a>
+                    <a href="#Portfolio" class="text-muted text-decoration-none  text-dark my-3">Portfolio</a>
+                    <a href="#Contact" class="btn rounded-5 border-0 py-2 px-4 fw-bold text-white w-50"
+                        style="background-color: #F24F13;">Contact Me
+                    </a>
+                </div>
+            </div>
+            <div id="overlay" class="position-fixed top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur d-none" style="z-index: 2;"></div>
+            <!--Navigation desktop-->
+            <div class="d-none d-md-flex col-auto gap-3 mx-3 align-items-center">
+                <a href="/" class="text-muted text-decoration-none mx-2 text-dark">Home</a>
+                <a href="#About" class="text-muted text-decoration-none text-dark">About</a>
+                <a href="#Services" class="text-muted text-decoration-none mx-2 text-dark">Services</a>
+                <a href="#Skills" class="text-muted text-decoration-none mx-2 text-dark">Skills</a>
+                <a href="#Portfolio" class="text-muted text-decoration-none mx-2 text-dark">Portfolio</a>
+                <a href="#Contact" class="btn rounded-5 border-0 py-2 px-4 fw-bold mx-auto text-white ms-md-auto"
+                        style="background-color: #F24F13;">Contact Me
+                </a>
             </div>
         </div>
     </nav>
@@ -56,7 +59,7 @@
         <a href="https://wa.me/0719263661" target="_blank"><img src="./Images/whatsapp-icon.png" alt="whatsapp" style="width: 40px;"></a>
     </div>
     <!--Header Content-->
-    <header id="About" class="container py-5 mt-2">
+    <header id="About" class="container py-md-5 mt-md-2">
         <div class="row align-items-center justify-content-between">
             <div class="col-12 col-lg-6 text-center text-lg-start">
                 <span class="fw-bold fst-italic" style="color: #F24F13; font-size: 18px;">Hello,</span>
@@ -263,11 +266,11 @@
                                         Super Predictions is a web platform under development that provides sports enthusiasts with data-driven betting tips and predictions. 
                                         My role focuses on building the frontend interface that delivers seamless and responsive user experience.
                                     </p>
-                                    <ul>
-                                        <li className="text-muted">Designed and Implemented a responsive UI using React and TailwindCSS.</li>
-                                        <li className="text-muted">Built reusable components for prediction cards, match listings, and subscription plans.</li>
-                                        <li className="text-muted">Integrated live data endpoints from sports APIs into the frontend (displaying odds and predictions).</li>
-                                        <li className="text-muted">Developed authentication flow (login, register, reset password pages).</li>
+                                    <ul class="features-list">
+                                        <li class="text-muted"><img src="./Images/icons8-check-50.png" alt="check icon">Designed and Implemented a responsive UI using React and TailwindCSS.</li>
+                                        <li class="text-muted"><img src="./Images/icons8-check-50.png" alt="check icon">Built reusable components for prediction cards, match listings, and subscription plans.</li>
+                                        <li class="text-muted"><img src="./Images/icons8-check-50.png" alt="check icon">Integrated live data endpoints from sports APIs into the frontend (displaying odds and predictions).</li>
+                                        <li class="text-muted"><img src="./Images/icons8-check-50.png" alt="check icon">Developed authentication flow (login, register, reset password pages).</li>
                                     </ul>
                                     <div class="mb-3">
                                         <span class="badge me-1 mb-1 text-muted">React</span>
@@ -275,7 +278,7 @@
                                         <span class="badge me-1 mb-1 text-muted"></span>
                                         <span class="badge me-1 mb-1 text-muted"></span>
                                     </div>
-                                    <a href="#" class="disabled btn me-2 progress-demo live-demo"><i class="bi bi-box-arrow-up-right me-1"></i> Live Demo</a>
+                                    <a href="#" class="disabled btn me-2 progress-demo live-demo"><i class="bi bi-box-arrow-up-right me-1"></i>In Progress</a>
                                 </div>
                             </div>
                         </div>
@@ -339,7 +342,7 @@
                                         <span class="badge me-1 mb-1 text-muted">SQL</span>
                                         <span class="badge me-1 mb-1 text-muted">AI Integration</span>
                                     </div>
-                                    <a href="#" class="disabled btn me-2 progress-demo live-demo"><i class="bi bi-box-arrow-up-right me-1"></i> Live Demo</a>
+                                    <a href="#" class="disabled btn me-2 progress-demo live-demo"><i class="bi bi-box-arrow-up-right me-1"></i>In Progress</a>
                                 </div>
                             </div>
                         </div>

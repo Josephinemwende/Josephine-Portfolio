@@ -187,6 +187,26 @@ nav ul li a:hover {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
+.features-list {
+  list-style: none; /* remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* spacing between icon and text */
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #6c757d; /* muted text */
+}
+
+.features-list li img {
+  width: 20px; /* smaller icon */
+  height: 20px;
+  margin-top: 2px; /* vertically center with text */
+}
 .project-images {
     display: flex;
     gap: 20px; /* space between images */
