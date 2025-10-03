@@ -13,7 +13,7 @@ body{
 /* Default (light mode) is already your current design */
 
 /* Dark mode overrides */
-body.dark-mode {
+/*body.dark-mode {
   background-color: #121212;
   color: #eaeaea;
 }
@@ -39,7 +39,7 @@ body.dark-mode .service-card {
 }
 
 body.dark-mode .service-card.highlighted {
-  background-color: #F24F13; /* Keep highlight */
+  background-color: #F24F13; 
   color: white;
 }
 
@@ -59,14 +59,42 @@ body.dark-mode .tech-badge {
 body.dark-mode .tech-badge:hover {
   background-color: #F24F13;
   color: white;
+}*/
+.nav-desktop a{
+  color:#031326;
+   transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.2s ease;
 }
-nav ul li a {
-    color: #031326;
-    transition: color 0.3s ease;
+.nav-desktop a:hover{
+  color:#F24F13;
+  transform: translateY(-2px);
 }
-nav ul li a:hover {
-    color: #F24F13;
-    font-weight: bold;
+.nav-desktop a.active {
+  color: #F24F13;
+  transform: scale(0.96);
+  transition: transform 0.1s ease, color 0.1s ease;
+}
+.nav-desktop button{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mobileNav a{
+  color:#031326;
+   transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.2s ease;
+}
+.mobileNav a:hover{
+  color:#F24F13;
+  transform: translateY(-2px);
+}
+.mobileNav a.active {
+  color: #F24F13;
+  transform: scale(0.96);
+  transition: transform 0.1s ease, color 0.1s ease;
+}
+/* Overlay effect when mobile menu is open */
+#overlay.show {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 .social-sidebar {
     top: 50%;
@@ -85,7 +113,7 @@ nav ul li a:hover {
 .portfolio-image {
   max-width: 90%;      /* set width */
   height: auto;     /* set height (same as width for perfect circle) */
-  border-radius: 50%;
+
   object-fit: cover; /* ensures the image scales/crops nicely */
 }
 
