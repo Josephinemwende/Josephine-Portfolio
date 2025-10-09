@@ -113,7 +113,7 @@ body.dark-mode .tech-badge:hover {
 .portfolio-image {
   max-width: 90%;      /* set width */
   height: auto;     /* set height (same as width for perfect circle) */
-
+  border-radius: 100%;
   object-fit: cover; /* ensures the image scales/crops nicely */
 }
 
