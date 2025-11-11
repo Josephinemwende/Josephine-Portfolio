@@ -22,7 +22,7 @@
   });
 });*/
 document.addEventListener("DOMContentLoaded", () => {
-  const text = "A Front-End Developer";
+  const text = "A Software Developer";
   const typingElement = document.getElementById("typing");
   let i = 0;
 
