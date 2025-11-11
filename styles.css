@@ -218,16 +218,22 @@ body.dark-mode .tech-badge:hover {
     background-color: #031326;
     color: white;
 }
-.card .view-code{
-    background-color: transparent;
-    color: #031326;
-    border: 2px solid #F24F13;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
+.view-code{
+  border: 2px solid #031326;
+  color: #031326;
+  transition: all 0.3s ease; 
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.view-code:hover {
+  background-color: #031326; 
+  color: #fff; 
+  text-decoration: none;
 }
 .features-list {
-  list-style: none; /* remove default bullets */
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
@@ -235,20 +241,20 @@ body.dark-mode .tech-badge:hover {
 .features-list li {
   display: flex;
   align-items: flex-start;
-  gap: 10px; /* spacing between icon and text */
+  gap: 10px; 
   margin-bottom: 12px;
   font-size: 16px;
-  color: #6c757d; /* muted text */
+  color: #6c757d; 
 }
 
 .features-list li img {
-  width: 20px; /* smaller icon */
+  width: 20px; 
   height: 20px;
-  margin-top: 2px; /* vertically center with text */
+  margin-top: 2px; 
 }
 .project-images {
     display: flex;
-    gap: 20px; /* space between images */
+    gap: 20px; 
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -265,24 +271,24 @@ body.dark-mode .tech-badge:hover {
 }
 
 .project-img:hover {
-    transform: scale(1.05); /* subtle zoom effect on hover */
+    transform: scale(1.05); 
 }
 @media (max-width: 768px) {
   #Portfolio .row.g-4 {
-    flex-direction: column !important; /* stack image & description cards */
+    flex-direction: column !important; 
   }
 
   #Portfolio .project-images {
     display: flex;
-    flex-wrap: wrap;          /* allow images to wrap */
-    justify-content: center;  /* center them */
+    flex-wrap: wrap;          
+    justify-content: center;  
     gap: 1rem;
   }
 
   #Portfolio .project-images img {
-    flex: 1 1 100%;    /* each image takes full width */
-    max-width: 90%;    /* prevent touching edges */
-    height: auto;      /* keep aspect ratio */
+    flex: 1 1 100%;   
+    max-width: 90%;    
+    height: auto; 
     border-radius: 8px;
   }
 }
