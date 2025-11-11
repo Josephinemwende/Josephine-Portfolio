@@ -107,6 +107,17 @@ body.dark-mode .tech-badge:hover {
 .social-sidebar a img:hover {
     transform: scale(1.2);
 }
+#typing {
+  border-right: 3px solid #031326;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink 0.6s step-end infinite alternate;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 #header h1{
     color: #031326;
 }

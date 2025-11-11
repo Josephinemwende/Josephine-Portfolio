@@ -21,6 +21,22 @@
     }
   });
 });*/
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "A Front-End Developer";
+  const typingElement = document.getElementById("typing");
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      typingElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 100); // typing speed (in ms)
+    }
+  }
+
+  typeEffect();
+});
+
 const menuIcon = document.getElementById("menu-toggle");
 const mobileNav = document.getElementById("mobile-nav");
 const overlay = document.getElementById("overlay");
