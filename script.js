@@ -22,19 +22,46 @@
   });
 });*/
 document.addEventListener("DOMContentLoaded", () => {
-  const text = "A Software Developer";
-  const typingElement = document.getElementById("typing");
-  let i = 0;
+  const roles = [
+  "Software Engineer",
+  "Full-Stack Engineer",
+  "Crafting Seamless Web Experiences"
+];
 
-  function typeEffect() {
-    if (i < text.length) {
-      typingElement.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeEffect, 100); // typing speed (in ms)
+  const el = document.getElementById("typing");
+
+  const typingSpeed = 80;
+  const deletingSpeed = 50;
+  const holdDelay = 1200;
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const current = roles[roleIndex];
+
+    if (!isDeleting) {
+      // typing
+      el.textContent = current.slice(0, charIndex++);
+      if (charIndex > current.length) {
+        isDeleting = true;
+        setTimeout(typeLoop, holdDelay);
+        return;
+      }
+    } else {
+      // deleting
+      el.textContent = current.slice(0, charIndex--);
+      if (charIndex < 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
     }
+
+    setTimeout(typeLoop, isDeleting ? deletingSpeed : typingSpeed);
   }
 
-  typeEffect();
+  typeLoop();
 });
 
 const menuIcon = document.getElementById("menu-toggle");
@@ -149,7 +176,7 @@ if (form) {
 
     } catch (err) {
       console.error(err);
-      formMessage.textContent = "❌ Something went wrong. Please try again later.";
+      formMessage.textContent = "Something went wrong. Please try again later.";
       formMessage.className = "form-message show error";
 
       setTimeout(() => {

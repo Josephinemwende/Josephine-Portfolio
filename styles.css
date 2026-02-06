@@ -107,22 +107,20 @@ body.dark-mode .tech-badge:hover {
 .social-sidebar a img:hover {
     transform: scale(1.2);
 }
-#typing {
-  border-right: 3px solid #031326;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  animation: blink 0.6s step-end infinite alternate;
+#typing::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% { opacity: 0; }
 }
 #header h1{
     color: #031326;
 }
 .portfolio-image {
-  max-width: 90%;      /* set width */
+  max-width: 100%;      /* set width */
   height: auto;     /* set height (same as width for perfect circle) */
   border-radius: 100%;
   object-fit: cover; /* ensures the image scales/crops nicely */
@@ -254,7 +252,7 @@ body.dark-mode .tech-badge:hover {
 }
 .project-images {
     display: flex;
-    gap: 20px; 
+    gap: 1rem; 
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -262,7 +260,7 @@ body.dark-mode .tech-badge:hover {
 }
 
 .project-img {
-    width: 300px; 
+    width: 280px; 
     max-width: 100%;
     height: auto;
     border-radius: 8px; 
