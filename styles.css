@@ -100,12 +100,14 @@ body.dark-mode .tech-badge:hover {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
+    z-index: 1050;
+    pointer-events: auto;
 }
 .social-sidebar a img {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 .social-sidebar a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 #typing::after {
   content: "|";
@@ -271,24 +273,137 @@ body.dark-mode .tech-badge:hover {
 .project-img:hover {
     transform: scale(1.05); 
 }
-@media (max-width: 768px) {
-  #Portfolio .row.g-4 {
-    flex-direction: column !important; 
-  }
+@media (max-width: 767px) {
 
-  #Portfolio .project-images {
-    display: flex;
-    flex-wrap: wrap;          
-    justify-content: center;  
-    gap: 1rem;
-  }
+    #Skills .row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
 
-  #Portfolio .project-images img {
-    flex: 1 1 100%;   
-    max-width: 90%;    
-    height: auto; 
-    border-radius: 8px;
+    #Skills .tech-badge {
+        display: inline-block;
+        margin: 6px;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    #Skills .row > div {
+        width: 100%;
+    }
+    .project-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .project-img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+@media (min-width: 768px) and (max-width:1024px){
+  .nav-desktop {
+      gap: 1.5rem !important;
+    }
+    .nav-desktop a {
+    padding-left: 2px;
+    padding-right: 2px;
   }
+  header .row {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+    }
+
+    header p {
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header .col-lg-6 {
+      width: 100%;
+    }
+
+    header .portfolio-image {
+      max-width: 60%;
+      margin: auto;
+    }
+      #Services .row.mb-5 {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    #Services .row.mb-5 .col-md-6 {
+      width: 100%;
+    }
+
+    #Services .row.mb-5 p {
+        max-width: 700px;
+        margin: auto;
+    }
+    #Services a.btn {
+        margin-top: 1.2rem;
+    }
+    /* Service cards grid */
+    #Services .row.g-4 {
+        justify-content: center;
+    }
+
+    #Services .service-card {
+        min-height: 100%;
+    }
+
+    #Services .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+  #Portfolio .row.align-items-center {
+        text-align: center;
+    }
+
+    #Portfolio .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Force project blocks to stack nicely */
+    #Portfolio .row.g-4.flex-column.flex-lg-row {
+        flex-direction: column !important;
+    }
+
+    #Portfolio .col-md-6 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Project cards spacing */
+    #Portfolio .card {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Image scaling */
+    #Portfolio .project-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    #Portfolio .project-img {
+        max-width: 85%;
+        height: auto;
+    }
+
 }
 .contact-section {
     background: #fff;
@@ -389,7 +504,6 @@ body.dark-mode .tech-badge:hover {
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
-
 
 /* BASE DARK MODE */
 /*
